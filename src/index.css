@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom luxury palette */
+  --color-gold: #D4AF37;
+  --color-gold-hover: #AA8B2C;
+  --color-gold-light: #F9F5E8;
+  --color-gold-dark: #8C6F1B;
+  
+  --color-luxury-slate: #0f172a; /* Slate-900 */
+  --color-luxury-charcoal: #1e293b; /* Slate-800 */
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@layer base {
+  body {
+    background-color: #fcfbfa;
+    color: #0f172a;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Marble background pattern */
+.marble-bg {
+  background-color: #fdfcf9;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(244,240,229,0.5) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(212,175,55,0.06) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(15,23,42,0.03) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(212,175,55,0.04) 0px, transparent 50%),
+    linear-gradient(135deg, rgba(212,175,55,0.02) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(212,175,55,0.02) 25%, transparent 25%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+}
+
+/* Luxury card shadow & gold border glow */
+.luxury-gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.1), 0 0 12px 1px rgba(212, 175, 55, 0.08);
+}
+
+.luxury-gold-glow {
+  box-shadow: 0 0 15px 2px rgba(212, 175, 55, 0.25);
+}
+
+.luxury-gold-text {
+  background: linear-gradient(135deg, #F0D575 0%, #D4AF37 50%, #9A7B1C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Custom hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

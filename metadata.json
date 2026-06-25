@@ -1,0 +1,6 @@
+{
+  "name": "Educational Platform Onboarding",
+  "description": "A modern, responsive, and high-fidelity onboarding form wizard for an educational platform with auto-save progress, form validation, and interactive role selection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
